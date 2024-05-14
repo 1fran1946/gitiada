@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href=
+"data:image/gif;base64,R0lGODlhEAAQAPcAAP///+lJFOhNFeZQE/FbFudMEdk4DO5JGd0+B/FPGd82A/hWHuJLFeZWLctQFfFRHPVUHuVHEP9qMN1ACO1SJdAwCulGFd87Cu5NItQ7EPRYKdEoAK8fAPTPO/G6Ns8vA9s6DNQ0A+pHGdI0E+g9FuBBAOCgMN9BButJEOZVFf9qLvJdEeO0NP/2QeuIJ+tOGMsuANk7C9cwENQaFMU1Cf/mXf//T9+aJeBaE+hHG9hXCvOvH///XdxnAPBkGulPEuI/Ev9GHcoKAMIsBfLFNv/2OP//Pfa4R9xLAO9VHvvHTf//YtqLIcwvAfZjIfBWF/pbLPpOFb9HAP/xVeXwDu/nFObPF9k4CvdPE+5WEv/NPb2LAOZEGdw/IvNiIvFUG/tmKeNWBePDGv//Nv76Nf/1R//uJ+xcIfVdJetLFO2mIP/7U/JuIttKIeZUFvNWH/dgHehoGP//Xv//TtaSDeqQKf/0N+/VNed8H/hZM+iIHf//b/CJJPpnPepVGetVG/dVGfJfK85yA++dPuhEGflHGuKJG/3/Sv/rSfJ2JOZgAP//auSqJfZpN/ZgJuhgGPBbEOxzHvV9HvBvI/hjJP9oKNxWDvXeW//8Ov/KRMRVAP//h+SzLOxwNPZtMPGHKexhEfdsJ/91LPVuI/VwI/dyKPluL+6PP/3hOv//ZeCwG///a+25P/6UTfN0KfSQLvPFOd5rDPdGEfNCF/1hLP1xNfZvMvpqNcNaBfjNQe7rKv//WOKYL/iYTPGFKvpnFduuIf/mPOlcAOZIBvRfG/+AOvp5MfZ1KNJoF//ZWPHsM9+cK/qTTPaROPpaGehYD/C5Hf//N/n/L+TSGu3HK/C4Mf7cPP/7Pv//Vu3gMf//UfraRP+XSv2YS/ZTE/lSGPVWFOBCBPN8HuK2J+7fNfrgOPPWMuq7K/KfM+FoIvKRRPnjXPjlVvulV/VcGvVlIvlvLfd2LvB3JPqHMfqDMfiEO/qGPvyJQfOCOPeOPumcOP7OVf6oYQAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFewAAACwAAAAAEAAQAAAI/wABPPjw4seTL2/+PPr06pczbwACQAABAwgUMHAAQQIFC9izb+4ERAgRI0iUMHECRQoVKxg0cO8GSBAhQ4gUMXIESRIlS1i0cPAITBgxY8iUMXMGTRo1a5g0cfEKUCBBgwgVMnQIUSJFi9i0cfIMVChRo0iVMnUKVSpVqxg1cvMOWDBhw4gVM3YMWTJly1i1cvQQXDhx48iVM3cOXTp165g1c/USYECBAwkWNHgQYUKFC9m1c/YUZEiRI0mWNHkSZUqVKxk2dPcWaFChQ4kWNXoUaVKlS1m2dPgYbFixY8mWNXsWbVq1i4c2dfkacGDBgwkXNnwYcWLFa9m2dfocdCRo0aNJlzZ9GnVq1YsZN3b7AHhw4cOJFzd+HHly5atZt3b8BAQAOw==")}
+
+
+  <title>git</title>
+  <style>
+  *:not(hr), *::after, *::before {box-sizing: border-box;margin:0;padding:0;border:0}ul {list-style-type: none}
+#i{padding: 33px 0;background: linear-gradient(rgba(0,0,0,0.9), blue); 
+text-align: center;
+}
+
+#i div{margin: auto; padding-left:22px; max-width: 400px; text-align: left;}
+p {margin-left:-22px; padding:0 15px 0; color: red; background-color: pink;width: fit-content;
+clip-path: polygon(0 0, 100% 0, 90% 50%, 100% 100%, 0 100%);
+}
+
+.e {text-decoration: none; color: gold;}
+.maroov {padding-left: 33px; background: maroon;}
+.navy {padding-left: 33px; background: navy;}
+
+.ada {display: inline-block; width:16px; height:16px; background-repeat: no-repeat;  background-image: url(data:image/gif;base64,R0lGODlhEAAQAOYAAP///93f4cjLz/n6+vr6+8XIzNrc3rS4vWNsdoKJkff3+IGIkKmus+nq7KSqr9PV2GpyfGRtd9XY2ujq6+Di5L/Dx/r//+vs7bi8wbe8wMHFybG1urG2u/b39/7+/t7g4piepNLV2PDx8pmfpWpzfG93gKWqsGZvea+0uZ2iqZSaoZqgppugp66zuJWbomVueJuhp/P09XJ6g5CWnaGnrXB5gpmfpvLz9I+WnZiepaits6uwtZOaoJKYn52jqayxttHU1/Hy8/j4+cHEyLa6v+rr7KOprtLU12lye6OorrS5vauvtc3Q0/v8/Pv7+8zP0gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFewAAACwAAAAAEAAQAAAHvoAAgoIeJi8vOoOKih8IMCwIFIuCDRQKICcxNxEwQhRFgwcIowgoFhY7pAhKAAEIDhUbIaenQBtDRpECCA+nIikyMikip0cITAMJEBcWIwgzOAgjFhNICU0AChEYFiQqgjwlFkQRCoLaGRYlK4I94kQv5gQLy80QNNE21NZOBQgSvljUkOEjyKkHCJ4YeKWBwwdaFgJw0JAEQQAADFS1OPVD1ZJBEyh0wKQpAgtPDSYBaGQjRySVgzy4GMVuUSAAOw==)}
+.cres {
+display: inline-block; width:26px; height:16px; background-repeat: no-repeat; 
+background-color: red;
+background-position: center;
+ background-image: url(data:image/gif;base64,R0lGODlhEAAQAOYAAP8AAOVpY9s1Ld5DPPCqp+mGgdkuJdchGNkuJts0LNozK9gmHdYeFd5HP/TAvdo0K9cfFtkrI9s2Lts3MNs3L9gnH9geFe6cmed+eNceFdoxKdowKNoyKts4MNksI9goH9ouJdouJuBRSeiAfNYaEdglHNgmHtszK+6emtYdFOyWkuNeWNcgF+qKhfr///O8udoxKtQRB99LRfvt7v/8/t5HQNw6M9kpId9KQ9ovJ/PBv/KysdovJtw/ONgnHtszLPCzsPnf3uZwatUUCtowJ/fS0frl5fO9vNYWDdw6Mto0LNcjG95FPffRz/K4ttktJd09Nf3w8eh3c9ceFvS/vuqIg9w5Me6fnO+mo/77/Nw+NtYeFOmCf95KQ9w7M+VqZdkpINktJNknHt1BOdYbEtciGt5JQtYZEPCrqNYcE9gpINs5MdccE9cdFdgoINgkG9UWDd9MReBQSeZxbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQEewABACwAAAAAEAAQAAAH5oAAgoIrAoYCUFeDixggLDmGShUpVmiLDxkhEhSGEh0SYGmDBRAaCBoeCQkcN0phamyCBhEbIi0pPhtLElhiEm0qAQcSHCMuOj9DTFFZY2tucgIIExEkLy5ARC4uWmQCGoYJFB0lMDsuRS5SKQodh6oSGjE8QUZNU1ucCYYKAg8mMrYdcUHlAI8ESgQMWCDAw4kZLoQgceKCSxkFT6AQYNAPBY0eEFJAqOLCTIc3cwA0qPAhRY0MEpI8ydCFDA84ghxY8KDABgdOFBR4MeAjzqALDFLcAKfqiYkziwapwHFIgJUviwIBADs=)}
+ 
+.fork{display: inline-block; width:16px; height:16px; background-repeat: no-repeat;  background-image: url(data:image/gif;base64,R0lGODlhEAAQANUAAPb4+ubp7KWstJKapLG4v/T2+KGpsZefqa+2vYyVn7a9w8vQ1ezu8ZKbpOLl6ens78HHzY2WoOzv8ePn6sjN0/T2+eHk6O/x9Nve4snO0+jr7sHGzPX3+aWttZCYotXZ3ZmhqqattaOrs5afqJihqtre4sfM0tba3r7Eyurt8OXo6/Dy9aKqsre9xOfq7ZScprK4vwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQEewABACwAAAAAEAAQAAAGc0CAcEgsDgOGBoSIarBcRMEBkcAISwnEoUMcIByJjNCUcCBeREIiEdEINZE1jFhQJCTEVKJVKS4SE0QqCQtGDGuIiHhGDxQbICAbGSlGRSEhlUYcBgYcmUMVHWshnp8WYRllnwAXHiIiHiurAB8jJCezs0EAOw==)} 
+
+.five{display: inline-block; width:16px; height:16px; background-repeat: no-repeat;  background-image: url(data:image/gif;base64,R0lGODlhEAAQAPcAAP///ykoKUVJUbq/xSIhIwAAAB02WDRWjqSepy0wNgQEDThOaB5FhAcAO5masztIUgMMIDxXdytWlAAADgcAPgkMO2Nia1RgbwAHGgAIEQACBhgqQ1iKuzFgoRQMQiIkUwAADxsWRF1YVQAIGgMTJwMYJgAGDAIJGVF5pDJhogAADBMLQicofikW4zwp5Doun21tbR8tQQkZLgAJEwAEEFyDtTpwsw8KPycqWCQSnCwasD4uqmppaQsCACMrOhImQ2yTxUB7vg0IPy4sWgAAIwYAIicfWPf39yEdHQcAABkdIyI/YoCizkyHzA8JRDAqXwAANgwBMCkiXPb19QMAAAgAAAkGAhopPJ+11ViW3wAAGRULTjYtbDEgrAIAXSoka7m4tgkCABIHAA8AAHVoX2Ke4gAAIhkOVTInbAsE0k06/1hL2mxraw8MFgAAEToyO3Sz+QAAKBgOUzIkWwAATgAAqjcyyiUkJRITIAAFMCUWGJLJ/wAAKQ0FTCETbRQKoHZh8rqz8vr7+wsQPJHG/wAAGgAAIE1FfNHS8b6+vQoeRI+s0HiCmYB+flZUU7S0tAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFewAAACwAAAAAEAAQAAAI0QABCBwIg8eRgQgTiihQAMmUhAkvjGDIEAxEgQ8wkIjRgyIbiAkKZCghw0cSKgzvCBpIgKEGEzN+KKkShmIiAAEo6lxiRUwbPAwbCSigAMKGEzQYXhnjJs8gRY4GGFgQgQOKGkCYYCHzRg/DRwAOMJDQIYWNIE2ylIGzh9AigQgKTJiggi4ILWbi8CnEaGADCh5W3BDiZMsZOX0MIXRQ4QMLHEOecEEzx8+hhAxb5CACpUsaOn8QJbQAwoWOIlG8qKkD6GKIFzuMSPmyxk6ggQEBADs=)}
+
+
+
+.dodo{padding-left: 0 !important;
+display: flex; 
+ height:18px; 
+justify-content: space-between;
+background-repeat: repeat-x; 
+background-position: 0 3px; 
+background-image: url(data:image/gif;base64,R0lGODlhEAAQAKIAAP////+2kLZmAAAAOgAAAGa2/wBmtjoAACH/C05FVFNDQVBFMi4wAwEAAAAh+QQFewAAACwAAAAAEAAQAAADHQi63P4wyknrC6O4cPQShOGA4oJ5DIdabOu+MJUAADs=)}
+
+.dodo span{background-color: #17172b;}
+.dodo a:first-child span {padding-right:10px;}
+
+ 
+body {background-color: #eee;}
+.hidden{display: none}
+  </style>  
+</head>
+<body text="white">
+<a href="file:///K:/!/projAll/html3/DJ3/!dig3.html">aug2023</a>
+<a href="file:///K:/!/projAll/html2/dig2.html">feb2023</a>
+<a href="file:///K:/!/projAll/html1/!dig1.html">dec2023</a>
+<a href="file:///K:/!/projAll/css_%D0%BF%D1%81%D0%B5%D0%B2%D0%B4%D1%8B/index.html">два кота
+(с iframes)
+</a>
+<a href="https://1fran1946.github.io/js_onePathEditor/onepath.html"><div class="five"></div></a>
+
+<div id=i>
+<a class="e" href="#n1">➀</a>
+<a class="e" href="#n2">➁</a>
+<a class="e" href="#n3">➂</a>
+<a class="e" href="#n4">➃</a>
+<a class="e" href="#n5">➄</a>
+<a class="e" href="#n6">➅</a>
+<a class="e" href="#n7">➆</a>
+<a class="e" href="#n8">➇</a>
+<a class="e" href="#n9">➈</a>
+<a class="e" href="#n10">➉⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳</a>
+
+
+
+
+
+<a id="n0"></a>
+<div>
+ГИТ 2.21.0 windows.1<br>
+<br>
+24.11.2019<br>
+закачать на github<br>
+войти в папку через git bash here<br>
+выполнить git init<br>
+создать исключения (файл .gitignore)<br>
+<pre class="navy">git add .</pre>
+<pre class="navy">git rm --cached -r .</pre>
+если накосячил, то обратная команда - разгитить всё <br>
+<br>
+файл ff.txt<br>
+папка k1<br>
+файл включенных k2/j2/i.txt<br>
+<pre class="navy">git commit -m "z"</pre>
+в браузере иди и создавай на своем гитхабе репозиторий<br>
+запомни где-нить две строчки, которые он даст <br>
+<pre class="navy">
+git remot add origin https://github.com/<wbr>fre/piram<wbr>iten.git
+git push -u origin master</pre>
+тут попросит email и пасс в окне логинимся <br>
+
+</div>
+<a id="n2"></a>
+<div><p>//***2</p>
+<div class="dodo"><a class="e" href="#n6"><span>add пометить, индексировать </span></a><a class="e" href="#n6"><span>7</span></a></div>
+
+<div class="dodo"><a class="e" href="#n18"><span>branch действия с веткой </span></a><a class="e" href="#n18"><span>18</span></a></div>
+<div class="dodo"><a class="e" href="#n18"><span>checkout переключиться на ветку </span></a><a class="e" href="#n18"><span>18</span></a></div>
+<div class="dodo"><a class="e" href="#n6"><span>commit фиксация в бд </span></a><a class="e" href="#n6"><span>7</span></a></div>
+<div class="dodo"><a class="e" href="#n5"><span>config операции с конфигом </span></a><a class="e" href="#n5"><span>5</span></a></div>
+<div class="dodo"><a class="e" href="#n9"><span>init инит репо </span></a><a class="e" href="#n9"><span>9</span></a></div>
+<div class="dodo"><a class="e" href="#n6"><span>push залить в инет </span></a><a class="e" href="#n6"><span>7</span></a></div>
+<div class="dodo"><a class="e" href="#n19"><span>remote см. удаленный репо </span></a><a class="e" href="#n19"><span>19</span></a></div>
+<div class="dodo"><a class="e" href="#n17"><span>reset снять пометку(unstage) </span></a><a class="e" href="#n17"><span>17</span></a></div>
+<div class="dodo"><a class="e" href="#n15"><span>revert откат с записью в бд </span></a><a class="e" href="#n15"><span>15</span></a></div>
+<div class="dodo"><a class="e" href="#n14"><span>rm</span></a><a class="e" href="#n14"><span>14</span></a></div>
+<div class="dodo"><a class="e" href="#n10"><span>status состояние репо </span></a><a class="e" href="#n10"><span>10</span></a></div>
+<div class="dodo"><a class="e" href="#n11"><span>log смотрит бд </span></a><a class="e" href="#n11"><span>11</span></a></div>
+git stash - спрятать изменения<br>
+git stash clear - очистить спрятанное
+
+</div>
+<a id="n3"></a>
+<div><p>//***3</p><br>
+28.6.2019<br>
+c:\program files\git расположен здесь<br>
+файл конфига c:\programData\git\config <br>
+<pre class="maroov">
+[core]<br>
+symlinks=false 
+autocrlf=true 
+facache=true <br>
+[color]<br>
+diff=auto 
+status=auto 
+branch=auto 
+interactive=true <br>
+[help] <br>
+format=html <br>
+[rebase]<br>
+autosquash=true <br>
+</pre>
+еще конфиг <br>
+c:/program files/git/mingn64/ect/gitconfig <br>
+---<br>
+<pre class="navy">git config --list --show-origin </pre>
+</div>
+<a id="n4"></a>
+<div><p>//***4</p><br>
+Версия <br>
+<pre class="navy">git -version </pre>
+git version 2.21.0.windows.1 <br>
+
+</div>
+<a id="n5"></a>
+<div><p>//***5</p><br>
+значение переменной . настроек? ключа? <br>
+только все сразу <br>
+<pre class="navy">git config --list </pre><br>
+ключи? <br>
+значение ключа <br>
+<pre class="navy">git config user.name </pre>
+</div>
+<a id="n6"></a>
+<div><p>//***6</p> <br>
+1. для изменения помечены все файлы git add .<br> 
+2. изменение зафиксировано. сообщение: upd снимок git commit -m "upd" <br>
+3. изменения отправляются в ветку master по умолчанию на сервер heroku  git push heroku master <br>
+если не сдел коммит, то получишь src refspec master does not match any <br>
+commit - зарегистрировать/ зафиксировать/ закоммитить/ сделать снимок кода
+</div>
+<a id="n7"></a><a id="n8"></a>
+<div><p>//***8</p><br>
+личная идентификация<br>
+даю имя git config --global user.name "sem1111"<br>
+даю почту git config --global user.email sem1111@yandex.ru <br>
+</div>
+<a id="n9"></a>
+<div><p>//***9</p><br>
+репозиторий <br>
+есть файл file.html в папке c:/gitera <br>
+cd c:/gitera перешел туда <br>
+сделал инит git init <br>
+ininializeed empty git repository in c:/gitera/.git/ <br>
+задал отслеживаемые файлы git add file.html <br>
+git commit -m "fixiki is good!"<br>
+[master (root-commit)987c8e]fixiki is good!<br>
+1 file changed? 67 insertions(+)<br>
+create mode 100644 file.html <br>
+зафиксировал <br>
+Вуаля! Git репозиторий готов. В нем отслеживаемый файл и начальный коммит. на локальном компе. 
+</div>
+<a id="n10"></a>
+<div><p>//***10</p><br>
+28.6.2019<br>
+вопрос git status проверяет, можно ли коммитить <br>
+ответ On branch master nothing to commit, working tree clean.<br>
+коммитить нечего т.е. ниодин отслеживаемый файл не изменился. Git не видит неотслеживаемых файлов <br>
+ветка мастер
+</div>
+<a id="n11"></a>
+<div><p>//***11</p><br>
+git log покажет историю изменений <br>
+git log -p -2 подробно <br>
+git log --pretty=format:"%s" список коммитов-комментов<br>
+%h короткий код комента <br>
+%an автор <br>
+%ar когда был сделан <br>
+%s коментарий
+
+
+</div>
+<a id="n12"></a>
+<div><p>//***12</p><br>
+Имена, начинающиеся с точки <br>
+Винда не дает создать файл, начинающийся с точки. Поэтому делается в cmd.<br> 
+создать файл echo privet>.gitara <br>
+папка mkdir .dot <br>
+Или, открыть notepad++ и создать файл => .название <br>
+папка ?md .r 
+</div>
+<a id="n13"></a>
+<div><p>//***13</p><br>
+<div class="cres"></div> х Q<br>
+нажимай для выхода во всех непонятных ситуациях
+</div>
+<a id="n14"></a>
+<div><p>//***14</p><br>
+.gitignore <br>
+рядом с папкой .git должен лежать этот файл. Там перечислены, то что git не будет видеть.<br>
+комент только с новой строки<br>
+# знак коментария <br>
+f.txt игнорить файл <br>
+logs/ игнорить папку <br>
+win32/debug/un.dcu игнорить вложеный файл <br>
+чтобы .git не маячил постоянно сделал так <br>
+пометил git add .gitignore <br>
+разместил git rm --cached .gitignore <br>
+ c диска? снять слежку <br>
+ накосячил, значит разгитить все командой <br>
+ <pre class="maroov">git rm --cached -r . </pre>
+</div>
+<a id="n15"></a>                 
+<div><p>//***15</p><br>
+ git revert HEAD --no-edit  <br>
+по идее, должен откатить и сделать файл прежним, но... <br>
+error: the following untracked working tree files would be overwritten by merge <br>
+.gitignore <br>
+please move or remove then before you merge <br>
+aborting <br>
+fatal: revert failed 
+</div>
+<a id="n16"></a><a id="n17"></a>
+<div><p>//***16</p><br>
+untracked неотслеживаемый <br>
+tracked красного цвета unmodified modified <br>
+staged помеченые <br>
+add the file <br>
+edit the file <br>
+remove the file <br>
+stage the file <br>
+commit <br>
+бд <br>
+git reset HEAD file.htm<br>
+unstage <br>
+git add . индексация. пометить <br>
+git rm --cached file.htm снять слежку <br>
+add снять пометку git reset HEAD file.htm пометить <br>
+фиксация <br>
+смотреть историю: git log 
+</div>
+<a id="n18"></a>
+<div><p>//***18</p><br>
+branch (ветка)<br>
+мне надо сделать три версии одного файла. для админа, юзера и гость. как правильно переключаться между этими версиями? делается ветками<br>
+git branch -vv доступные ветки <br>
+git branch sex создать ветку <br>
+git checkout sex перейти в ветку <br>
+git checkout -b sex создать и перейти на новую ветку <br>
+git branch -d sex удалить ветку 
+</div>
+<a id="n19"></a>
+<div><p>//***19</p><br>
+git remote смотреть имя удаленного репо <br>
+гит баш (git-bash)<br>
+консоль гита <br>
+пкм ->git bash here <br>
+MINGW64 
+</div>
+<a id="n20"></a>
+<div><p>//***20</p><br>
+27.06.2019 репо Залить на Гитхаб<br>
+Заходи на гитхаб в своем акке->репозитории->new <br>
+имя дай opr_vs.svg <button>ok</button><br>
+гитхаб предложит код, две последние строчки надо юзать, это: <br>
+<pre class="navy">git remote add origin https://github.com/sem111/svg_vs_awp.git </pre><br>
+и <br>
+<pre class="navy">git push -u origin master </pre><br>
+первая пиши в гитбаш, потом вторую, чето погружается в инет и все ок. <br>
+вуаля. <br>
+в последующие заливы первую строку уже можно не вводить.<br>
+Удалить: Settings->DangerZone=>Delete this repo 
+</div>
+<a id="n21"></a>
+<div><p>//***21</p><br>
+Склонировать с гитхаба <br>
+в гитбаше пиши <br>
+<pre class="navy">git clone https://github.com/sem111/svg_vs_awp.git</pre> <br>
+на комп <br>
+с гитхаба на гитхаб. есть в чужом репозитории кнопка fork <div class="fork"></div> Жми ее.<br>
+гитхаб не пашет с браузера под WindowsXP. 
+</div>
+<a id="n22"></a>
+<div><p>//***22</p><br>
+Pull request на гитхабе  3.7.2019<br>
+Внести изменения в чужой репозиторий. Сделать:<br>
+1)вилку<br>
+2)коммит<br>
+3) пулл реквест <br>
+4) дождаться пока жертва примет 
+</div>
+<a id="n23"></a>
+<div><p>//***23</p><br>
+Web-сайт на гитхабе 4.7.2019 <br>
+Делаешь новый репо. Весь секрет в имени<br>
+sem1111.github.io  не проеби первое слово <br>
+ставь галку <label style="border: .1px solid white"> <input type="checkbox" checked>Init this repo with README </label>
+<button>ok </button> Теперь в адр. строке браузера пиши sem1111.github.io ура! он существует! <br>
+немного подшаманим. <br>
+Upload files ->залей иконку фавикон 16х16.ico (если есть)<br>
+2) create new file. имя index.html <br>
+<xmp style="text-align: left; padding-left:12px;background-color: black">
+<!DOCTYPE html><html lang="ru">
+<head><meta charset="utf-8">
+<link rel="shortcut icon" type="image/x-icon"
+ href="favicon.ico"></head>
+<body>site</body></html></xmp>
+<button>commit new file</button><br>
+3) ctrl+F5 страница обновится и фавикон виден <br>
+Создание папки также как файл a/empty создастся папка 
+</div>
+<a id="n24"></a>
+<div><p>//***24</p> <br>
+5.5.2022 перенестись в любую ветку <br>
+<pre class="navy">gitk --all&
+git checkout 332523546426 </pre>
+<table><tr><td style="width:50px;border-right:2px solid white;">в gitk</td><td>
+
+ctrl+ins скопировать № ветки <br>
+shift+ins вставить № ветки 
+</td></tr></table>  
+Как откатить? склонировал на комп. откатил на компе. скопировал ручками в какоето место. откатилсяна последнюю версию(вперед). удалил все нахуй и вставил туда сохраненные файлы. псевдо-откат такой...<br>
+</div>
+<a id="n25"></a>
+<div><p>//***25</p> <br>
+23.4.2023 <br>
+gitk <br>
+Нужен чтобы достать х-файл погребенный под релизами.<br>
+1) сделай копию позднейшего релиза <br>
+2) зайди в папку. сделай ПКМ-[git bash here]<br>
+3) запустится черная консоль. пиши gitk <br>
+4) запустится git-браузер. Сверху список всех коммитов/мерджей, и их id<br>
+5) скопируй нужные id [ctrl+ins]копировать  [shift+ins]вставить<br>
+6) В туже черную консоль пиши <br>
+<pre class="navy">git checkout ga4565   ....id </pre><br>
+произойдет откат <br>
+7) скопируй х-файл в надежное место <br>
+8) скопируй содержимое папки из пункта(1) обратно средствами виндоус.<br> 
+9) commit . Вуаля 
+
+</div>
+<a id="n26"></a>
+<div><p>//***26</p><br>
+12.5.2023 Видеть скрытые файлы в Win10 <br>
+Откройте проводник на панели задач. Выберите Вид -> Параметры -> Изменить параметры папок и поиска. На вкладке Вид в разделе Дополнительные параметры выберите «Показывать скрытые файлы».<br>
+</div>
+<a id="n27"></a>
+<div><p>//***27</p><br>
+13.5.2023 WebSite <br>
+Settings. Pages. Branch->main <button>ok </button><br>
+Как  отработало появится you site is live at: <mark>sem1111.github.io/manada</mark> <br>
+это копируй , вставь в ... <br>
+
+<pre><>Code, About<div class="ada"></div>->Website</pre> 
+</div>
+
+<img height="100">
+
+<a class="e" href="#n1">➀</a>
+<a class="e" href="#n2">➁</a>
+<a class="e" href="#n3">➂</a>
+<a class="e" href="#n4">➃</a>
+<a class="e" href="#n5">➄</a>
+<a class="e" href="#n6">➅</a>
+<a class="e" href="#n7">➆</a>
+<a class="e" href="#n8">➇</a>
+<a class="e" href="#n9">➈</a>
+<a class="e" href="#n10">➉⑪⑫⑬⑭⑮⑯⑰⑱⑲⑳</a>
+</div>
+
+<div class="lift hidden" style="position: fixed;right: 50px;bottom: 50px;width: 42px;aspect-ratio:1;background: #43806C;border: 2px solid #43806C;border-radius: 50%;cursor: pointer;padding-left: 7px;padding-top: 7px;z-index: 8;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M2.4 15.8L12.0 6.2 21.6 15.8" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" transform="rotate(0 12 12)"></path></svg></div> 
+<script>
+(function () {/*Elevator*/var l=document.querySelector('.lift');var V = 500;if (!l) return;  l.addEventListener('click',()=>{window.scrollTo({top: 0,behavior: 'smooth'});});  window.addEventListener('scroll',()=>{if (window.pageYOffset>V)l.classList.remove('hidden');if (window.pageYOffset<V)l.classList.add('hidden');});})(); //Elevator
+</script>   
+</body>
+</html>
